@@ -67,10 +67,15 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+          it('is displayed when clicked', function() {
+              $('menuIcon').trigger('click');
+              expect($('body').hasClass('menu-hidden')).not.toBe(true);
 
-
-
+              $('menuIcon').trigger('click');
+              expect($('body').hasClass('menu-hidden')).toBe(true);
+          });
     });
+
     /* TODO: Write a new test suite named "Initial Entries" */
 
         /* TODO: Write a test that ensures when the loadFeed
