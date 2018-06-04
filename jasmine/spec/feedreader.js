@@ -82,6 +82,7 @@ $(function() {
 
          it('changes content', function(done) {
              expect($('.feed').html()).not.toBe(initialFeed);
+             done();
          });
 
     });
