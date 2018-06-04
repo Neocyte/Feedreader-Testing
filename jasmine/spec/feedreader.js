@@ -45,10 +45,10 @@ $(function() {
 
          // Test 5 - The menu element toggles visibility when clicking menu icon
           it('is displayed when clicked', function() {
-              $('menuIcon').trigger('click');
+              $('a.menu-icon-link').trigger('click');
               expect($('body').hasClass('menu-hidden')).toBe(false);
 
-              $('menuIcon').trigger('click');
+              $('a.menu-icon-link').trigger('click');
               expect($('body').hasClass('menu-hidden')).toBe(true);
           });
 
