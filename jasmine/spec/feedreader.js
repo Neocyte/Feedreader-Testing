@@ -77,7 +77,7 @@ $(function() {
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
-    describe('Initial Entries', function () {
+    describe('Initial Entries', function() {
 
          /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -93,12 +93,25 @@ $(function() {
              expect($('.feed .entry').length).toBeGreaterThan(0);
              done();
          });
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
+    describe('New Feed Selection', function () {
+        var initialFeed;
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         beforeEach(function(done) {
+             loadFeed(0, function() {
+                 initialFeed = $('.feed').html(); // Stores initial feed
+                 loadFeed(1, done); // Loads new feed
+             });
+         });
+
+         it('changes content', function(done) {
+             expect($('.feed').html()).not.toBe(initialFeed);
+         });
     });
 }());
