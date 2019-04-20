@@ -15,7 +15,7 @@ I learned how to use Jasmine to write a number of tests against a pre-existing a
 
 ## Instructions
 
-To access the feedreader, click [here](https://neocyte.github.io/frontend-nanodegree-feedreader/).
+To access the feedreader, click [here](https://neocyte.github.io/Feedreader-Testing/).
 
 Clicking on any of the links within each feed takes you to the respective web page.
 
